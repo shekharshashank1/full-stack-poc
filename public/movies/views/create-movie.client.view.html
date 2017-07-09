@@ -1,0 +1,23 @@
+<section data-ng-controller="MoviesController">
+<h1>New Movie</h1>
+  <form data-ng-submit="create()" novalidate>
+    <div>
+      <label for="title">Movie Title</label>
+      <div>
+        <input type="text" data-ng-model="title" id="title" placeholder="Title" required>
+      </div>
+    </div>
+    <div>
+      <label for="genre">Movie Genre</label>
+      <div>
+        <textarea data-ng-model="genre" id="content" cols="30" rows="10" placeholder="genre"></textarea>
+      </div>
+    </div>
+    <div>
+      <input type="submit">
+    </div>
+    <div data-ng-show="error">
+      <strong data-ng-bind="error"></strong>
+    </div>
+  </form>
+</section>

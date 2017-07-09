@@ -1,0 +1,17 @@
+<section data-ng-controller="MoviesController" data-ng-init="find()">
+  <h1>Movies List</h1>
+  <ul>
+    <li data-ng-repeat="movie in movies">            
+      <div>
+        <p data-ng-bind="movie.title"></p>
+        <p data-ng-bind="movie.genre"></p>
+      </div>
+    </li>
+  </ul>
+ <span>Total Movies: </span> 
+ <span data-ng-bind="movies.length">
+ <div data-ng-hide="!movies || movies.length">
+    No favourite movies yet, why don't you <a href="/#!/movies/create">create one</a>?    
+  </div>
+  <a href="/#!/">Go Back</a>
+</section>
